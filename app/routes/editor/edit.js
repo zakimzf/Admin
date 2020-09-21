@@ -1,7 +1,10 @@
 import AuthenticatedRoute from 'ghost-admin/routes/authenticated';
 import {pluralize} from 'ember-inflector';
+import {inject as service} from '@ember/service';
 
 export default AuthenticatedRoute.extend({
+    notifications: service(),
+
     beforeModel(transition) {
         this._super(...arguments);
 
@@ -41,6 +44,11 @@ export default AuthenticatedRoute.extend({
             let returnRoute = pluralize(post.constructor.modelName);
 
             if (user.get('isAuthorOrContributor') && !post.isAuthoredByUser(user)) {
+                const errorMessage = `Permission error, cannot edit selected post "${post.get('title')}. Only authors or administrator users can edit this post."`;
+                this.notifications.showAlert(errorMessage, {
+                    type: 'warn',
+                    key: 'editor.post.edit'
+                });
                 return this.replaceWith(returnRoute);
             }
 
