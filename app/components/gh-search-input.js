@@ -25,6 +25,7 @@ export default Component.extend({
     notifications: service(),
     router: service(),
     store: service(),
+    session: service(),
 
     content: null,
     contentExpiresAt: false,
@@ -158,11 +159,17 @@ export default Component.extend({
         this.set('contentExpiresAt', new Date(now.getTime() + contentExpiry));
     }).drop(),
 
-    _loadPosts() {
+    async _loadPosts() {
         let store = this.store;
         let postsUrl = `${store.adapterFor('post').urlForQuery({}, 'post')}/`;
         let postsQuery = {fields: 'id,title,page', limit: 'all'};
         let content = this.content;
+        let {session} = this;
+        let user = await session.user;
+
+        if (user.get('isAuthorOrContributor')) {
+            postsQuery.filter = `author:${user.slug}`;
+        }
 
         return this.ajax.request(postsUrl, {data: postsQuery}).then((posts) => {
             content.pushObjects(posts.posts.map(post => ({
