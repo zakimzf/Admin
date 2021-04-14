@@ -40,6 +40,13 @@ export default Controller.extend(ValidationEngine, {
         return color;
     }),
 
+    ssoProvider: computed('ghostPaths', function () {
+        // NOTE: get the value from the server, e.g. config endpoint
+        let url = this.get('ghostPaths.url').join(this.get('ghostPaths.adminRoot'), 'sso', 'google');
+
+        return url;
+    }),
+
     siteIconStyle: computed('config.icon', function () {
         let icon = this.get('config.icon');
 

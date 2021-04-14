@@ -19,6 +19,13 @@
                     </div>
                 </div>
             {{else}}
+
+            {{#if this.ssoProvider}}
+            <a href="{{this.ssoProvider}}" class="gh-btn gh-btn-login gh-btn-block">
+                <span>Sign in using Google</span>
+            </a>
+            {{/if}}
+
             <form id="login" method="post" class="gh-signin" novalidate="novalidate" {{action "authenticate" on="submit"}}>
                 <header>
                     <div class="gh-site-icon" style="{{this.siteIconStyle}}"></div>
