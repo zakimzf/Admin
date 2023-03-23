@@ -110,7 +110,7 @@
     "eslint-plugin-ghost": "2.16.0",
     "faker": "5.5.3",
     "fs-extra": "9.1.0",
-    "glob": "7.1.6",
+    "glob": "7.2.3",
     "google-caja-bower": "https://github.com/acburdine/google-caja-bower#ghost",
     "grunt": "1.6.1",
     "grunt-shell": "3.0.1",
