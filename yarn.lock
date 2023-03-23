@@ -1642,12 +1642,28 @@
   resolved "https://registry.yarnpkg.com/@sinonjs/text-encoding/-/text-encoding-0.7.1.tgz#8da5c6530915653f3a1f38fd5f101d8c3f8079c5"
   integrity sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
 
+"@tryghost/errors@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@tryghost/errors/-/errors-0.2.17.tgz#9b89f3845256ace5650593f41cc86d64965b56ed"
+  integrity sha512-Mj+bedWOwfooNA8fQdp6gIcRvWcKhJ/hOyGzu6OLFDLgEosFEeuFgXE6SsAWkf9+9NTYX30w88qGIWZqOhEAmQ==
+  dependencies:
+    "@tryghost/ignition-errors" "^0.1.0"
+    lodash "^4.17.21"
+
 "@tryghost/helpers@1.1.43":
   version "1.1.43"
   resolved "https://registry.yarnpkg.com/@tryghost/helpers/-/helpers-1.1.43.tgz#75e7677340e6f956db620cb7d29e8acadab4800d"
   integrity sha512-Hviu65xnMG1w8j/ibTjqxoJyh4ZkCy2y3IURagZ16FfAiORKPYmGXbQb8ueDsazVnATfrhj1fzc18aTqf9w4lg==
   dependencies:
     lodash-es "^4.17.11"
+
+"@tryghost/ignition-errors@^0.1.0":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@tryghost/ignition-errors/-/ignition-errors-0.1.8.tgz#6d4c4d4e02d32403ca1e574eaa91b3c0d138d6f6"
+  integrity sha512-4KYU+kDXZyP7tmzyHiUkfDy9RWxKAtA/6xTGdxYHurE5ZlT++cDDfdUtF0v3308GGUzKlBzRc3jmLjDYpngcBQ==
+  dependencies:
+    lodash "^4.17.21"
+    uuid "^8.3.2"
 
 "@tryghost/kg-clean-basic-html@1.0.17", "@tryghost/kg-clean-basic-html@^1.0.17":
   version "1.0.17"
@@ -1661,12 +1677,14 @@
   dependencies:
     "@tryghost/kg-clean-basic-html" "^1.0.17"
 
-"@tryghost/limit-service@0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@tryghost/limit-service/-/limit-service-0.4.2.tgz#3f096d3f0b158ffb51411cb7f0f772fd216c5fce"
-  integrity sha512-bFT2nsLVJdfIKirHsLEoZk2ZDF9Gx0tSJomfoDRyc5iGnI7Vgy3FTemlAXjM50NfFH1VCFBZiH81QeoTxa7vbw==
+"@tryghost/limit-service@0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@tryghost/limit-service/-/limit-service-0.6.5.tgz#59c98edd697828837bf0133acf6ab612a19d7848"
+  integrity sha512-OuCe4oXE9h8zlJV9YdhLbnZXv+JtNEAyg60q6DCoOMwTistHlMaNx7FLxKaOzNsSSOSY5Nz+V1Bm/7/ed7WFXg==
   dependencies:
+    "@tryghost/errors" "^0.2.17"
     lodash "^4.17.21"
+    luxon "^1.26.0"
 
 "@tryghost/members-csv@1.0.0":
   version "1.0.0"
@@ -10319,6 +10337,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+luxon@^1.26.0:
+  version "1.28.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.28.1.tgz#528cdf3624a54506d710290a2341aa8e6e6c61b0"
+  integrity sha512-gYHAa180mKrNIUJCbwpmD0aTu9kV0dREDrwNnuyFAsO1Wt0EVYSZelPnJlbj9HplzXX/YWXHFTL45kvZ53M0pw==
+
 magic-string@^0.24.0:
   version "0.24.1"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.24.1.tgz#7e38e5f126cae9f15e71f0cf8e450818ca7d5a8f"
@@ -14436,7 +14459,7 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
