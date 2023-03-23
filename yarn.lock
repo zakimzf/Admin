@@ -6904,15 +6904,15 @@ ember-truth-helpers@^2.1.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-useragent@0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/ember-useragent/-/ember-useragent-0.10.0.tgz#63a5094b19a7710153895d1813bc817524200825"
-  integrity sha512-7iQSvhyhyOQkGS1qClKM0hMNOHSv3BO8bUc7rWLfEtLOo9u7fQB8smaWee34nn+S3/ur44qiIAXR5v4HrlBF9A==
+ember-useragent@0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/ember-useragent/-/ember-useragent-0.12.0.tgz#0c327985810aead9b055481f71f0cbcf75b217a4"
+  integrity sha512-EeYWqlfF/37vP7cpvAU7srEtm8BpX0c4Hk899tQjKbNDPdNqQ0C8G9vh1YgDqPed4URJi5xmjtynGeQbDbQwpw==
   dependencies:
     ember-auto-import "^1.5.3"
     ember-cli-babel "^7.13.0"
     ember-cli-htmlbars "^4.2.0"
-    ua-parser-js "^0.7.18"
+    ua-parser-js "^0.7.31"
 
 emberx-file-input@1.2.1:
   version "1.2.1"
@@ -14198,10 +14198,10 @@ typescript-memoize@^1.0.0-alpha.3:
   resolved "https://registry.yarnpkg.com/typescript-memoize/-/typescript-memoize-1.0.0-alpha.4.tgz#fd97ab63807c3392af5d0ac5f4754254a4fcd634"
   integrity sha512-woA2UUWSvx8ugkEjPN8DMuNjukBp8NQeLmz+LRXbEsQIvhLR8LSlD+8Qxdk7NmgE8xeJabJdU8zSrO4ozijGjg==
 
-ua-parser-js@^0.7.18:
-  version "0.7.23"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.23.tgz#704d67f951e13195fbcd3d78818577f5bc1d547b"
-  integrity sha512-m4hvMLxgGHXG3O3fQVAyyAQpZzDOvwnhOTjYz5Xmr7r/+LpkNy3vJXdVRWgd1TkAb7NGROZuSy96CrlNVjA7KA==
+ua-parser-js@^0.7.31:
+  version "0.7.34"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.34.tgz#afb439e2e3e394bdc90080acb661a39c685b67d7"
+  integrity sha512-cJMeh/eOILyGu0ejgTKB95yKT3zOenSe9UGE3vj6WfiOwgGYnmATUsnDixMFvdU+rNMvWih83hrUP8VwhF9yXQ==
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
